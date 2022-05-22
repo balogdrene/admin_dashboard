@@ -1,0 +1,128 @@
+:root {
+    --primary: #7d52dd;
+    --primary-light: #b180ff;
+    --primary-dark: #4825aa;
+    --secondary: #eff9f0;
+    --secondary-light: #ffffff;
+    --secondary-dark: #bdc6be;
+    --primary-text: #ffffff;
+    --secondary-text: #000000;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template: 1.5fr 8fr / 1.5fr 8fr ;
+    grid-template-areas:    'sidebar header'
+                            'sidebar main';
+}
+
+header {
+    padding: 1rem;
+    color: var(--secondary-text);
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: header;
+}
+
+#header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-bottom-left {
+    display: flex;
+    align-items: center;
+    grid-area: header-bottom-left;
+}
+
+#header-bottom-left > img {
+    height: auto;
+    width: 50px;
+}
+
+#header-bottom-left-text > p:nth-of-type(1){
+    font-size: 1.5rem;
+}
+#header-bottom-left-text > p:nth-of-type(2){
+    font-size: 2rem;
+}
+
+#sidebar {
+    color: var(--primary-text);
+    background-color: var(--primary);
+    grid-area: sidebar;
+    display: flex;
+    flex-shrink: 0;
+    
+}
+
+#sidebar-content {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.sidebar-element > * {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-element {
+    margin-bottom: 2rem;
+}
+
+.sidebar-element > li {
+    margin-bottom: 1rem;
+}
+
+.side-decoration {
+    background-image: linear-gradient(to right, var(--primary-dark), var(--primary));
+    width: 1rem;
+    border-radius: inherit;
+    flex-shrink: 0;
+    
+}
+.card-side-decoration {
+    background-image: linear-gradient(to right, var(--primary), var(--primary-light));
+    width: 1rem;
+    border-radius: 10px 0px 0 10px;
+    flex-shrink: 0;
+    
+}
+
+main {
+    color: var(--secondary-text);
+    background-color: var(--secondary-light);
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    gap: 1rem; 
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 20px;
+    color: var(--secondary-text);
+    background-color: var(--secondary);
+    display: flex;
+    
+    
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+.material-symbols-outlined {
+    margin-right: 1rem;
+}
+
+
+
